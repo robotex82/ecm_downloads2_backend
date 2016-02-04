@@ -1,0 +1,10 @@
+.well
+  = form.association :ecm_downloads_download_category
+
+.well
+  = form.input :asset
+
+.well
+  = form.input :name
+  = form.input :description, input_html: { 'data-add-editor': true, 'data-editor-syntax': :textile }
+  = form.input :published, as: :boolean

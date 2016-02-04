@@ -1,0 +1,12 @@
+de:
+  classes:
+    ecm/downloads/backend/engine: 'Downloads'
+  ecm:
+    downloads:
+      backend:
+        downloads:
+          table:
+            download: 'Herunterladen'
+  routes:
+    mount:
+      ecm_downloads_backend: '/backend/downloads'

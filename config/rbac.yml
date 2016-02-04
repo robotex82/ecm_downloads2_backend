@@ -1,0 +1,40 @@
+defaults:
+  permissions:
+    - ecm/downloads/backend/engine
+    - ecm/downloads/download_category/index
+    - ecm/downloads/download_category/show
+    - ecm/downloads/download_category/new
+    - ecm/downloads/download_category/create
+    - ecm/downloads/download_category/edit
+    - ecm/downloads/download_category/update
+    - ecm/downloads/download_category/destroy
+    - ecm/downloads/download/index
+    - ecm/downloads/download/show
+    - ecm/downloads/download/new
+    - ecm/downloads/download/create
+    - ecm/downloads/download/edit
+    - ecm/downloads/download/update
+    - ecm/downloads/download/destroy
+  roles:
+    ecm/downloads/administrator:
+      - ecm/downloads/backend/engine
+      - ecm/downloads/download_category/index
+      - ecm/downloads/download_category/show
+      - ecm/downloads/download_category/new
+      - ecm/downloads/download_category/create
+      - ecm/downloads/download_category/edit
+      - ecm/downloads/download_category/update
+      - ecm/downloads/download_category/destroy
+      - ecm/downloads/download/index
+      - ecm/downloads/download/show
+      - ecm/downloads/download/new
+      - ecm/downloads/download/create
+      - ecm/downloads/download/edit
+      - ecm/downloads/download/update
+      - ecm/downloads/download/destroy
+    ecm/downloads/reviewer:
+      - ecm/downloads/backend/engine
+      - ecm/downloads/download_category/index
+      - ecm/downloads/download_category/show
+      - ecm/downloads/download/index
+      - ecm/downloads/download/show
