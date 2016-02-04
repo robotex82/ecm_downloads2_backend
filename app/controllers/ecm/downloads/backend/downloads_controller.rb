@@ -1,4 +1,4 @@
-class Ecm::Downloads::Backend::DownloadsController < Itsf::Backend::BaseController
+class Ecm::Downloads::Backend::DownloadsController < Itsf::Backend::Resource::BaseController
   def self.resource_class
     Ecm::Downloads::Download
   end
