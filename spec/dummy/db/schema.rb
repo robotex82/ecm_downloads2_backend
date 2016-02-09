@@ -11,39 +11,37 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151130141606) do
-
-  create_table "ecm_downloads_download_categories", force: :cascade do |t|
-    t.string   "name"
-    t.text     "description"
-    t.string   "locale"
-    t.integer  "position"
-    t.integer  "ecm_downloads_downloads_count", default: 0, null: false
-    t.integer  "parent_id"
-    t.integer  "lft"
-    t.integer  "rgt"
-    t.integer  "depth"
-    t.string   "slug"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+ActiveRecord::Schema.define(version: 20_151_130_141_606) do
+  create_table 'ecm_downloads_download_categories', force: :cascade do |t|
+    t.string   'name'
+    t.text     'description'
+    t.string   'locale'
+    t.integer  'position'
+    t.integer  'ecm_downloads_downloads_count', default: 0, null: false
+    t.integer  'parent_id'
+    t.integer  'lft'
+    t.integer  'rgt'
+    t.integer  'depth'
+    t.string   'slug'
+    t.datetime 'created_at'
+    t.datetime 'updated_at'
   end
 
-  create_table "ecm_downloads_downloads", force: :cascade do |t|
-    t.string   "name"
-    t.text     "description"
-    t.datetime "published_at"
-    t.integer  "ecm_downloads_download_category_id"
-    t.integer  "position"
-    t.string   "slug"
-    t.string   "asset_file_name"
-    t.integer  "asset_file_size"
-    t.string   "asset_content_type"
-    t.datetime "asset_updated_at"
-    t.string   "asset_fingerprint"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+  create_table 'ecm_downloads_downloads', force: :cascade do |t|
+    t.string   'name'
+    t.text     'description'
+    t.datetime 'published_at'
+    t.integer  'ecm_downloads_download_category_id'
+    t.integer  'position'
+    t.string   'slug'
+    t.string   'asset_file_name'
+    t.integer  'asset_file_size'
+    t.string   'asset_content_type'
+    t.datetime 'asset_updated_at'
+    t.string   'asset_fingerprint'
+    t.datetime 'created_at'
+    t.datetime 'updated_at'
   end
 
-  add_index "ecm_downloads_downloads", ["ecm_downloads_download_category_id"], name: "index_ecm_downloads_downloads_on_download_category_id"
-
+  add_index 'ecm_downloads_downloads', ['ecm_downloads_download_category_id'], name: 'index_ecm_downloads_downloads_on_download_category_id'
 end

@@ -10,11 +10,11 @@ module Ecm
         end
 
         mattr_accessor :registered_controllers do
-          -> {[]}
+          -> { [] }
         end
 
         mattr_accessor :registered_services do
-          -> {[]}
+          -> { [] }
         end
       end
     end

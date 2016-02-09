@@ -12,6 +12,6 @@ class Ecm::Downloads::Backend::DownloadsController < Itsf::Backend::Resource::Ba
   def permitted_params
     params
       .require(:ecm_downloads_download)
-        .permit(:ecm_downloads_download_category_id, :asset, :name, :description, :published)
+      .permit(:ecm_downloads_download_category_id, :asset, :name, :description, :published)
   end
 end
