@@ -10,4 +10,8 @@ class Ecm::Downloads::Backend::DownloadCategoriesController < Itsf::Backend::Res
       .require(:ecm_downloads_download_category)
       .permit(:name, :description, :locale)
   end
+
+  def load_resource
+    load_scope.friendly.find(params[:id])
+  end
 end
