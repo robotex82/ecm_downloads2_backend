@@ -1,6 +1,6 @@
 Ecm::Downloads::Backend::Engine.routes.draw do
-  resources :download_categories
-  resources :downloads do
+  backend_resources :download_categories
+  backend_resources :downloads do
     member { get :download }
   end
 
