@@ -17,7 +17,8 @@ class Ecm::Downloads::Backend::DownloadsController < Itsf::Backend::Resource::Ba
   end
 
   def collection_scope
-    resource_class.includes(:ecm_downloads_download_category)
+    @q = collection_scope_with_search_scopes(resource_class.includes(:ecm_downloads_download_category)).ransack(params[:q])
+    @q.result(distinct: true)
   end
 
   def load_resource
