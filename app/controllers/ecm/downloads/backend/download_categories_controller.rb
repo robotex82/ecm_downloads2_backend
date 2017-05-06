@@ -7,7 +7,7 @@ class Ecm::Downloads::Backend::DownloadCategoriesController < Itsf::Backend::Res
 
   def permitted_params
     params
-      .require(:ecm_downloads_download_category)
+      .require(:download_category)
       .permit(:name, :description, :locale)
   end
 

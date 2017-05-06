@@ -1,4 +1,4 @@
-= table.association :ecm_downloads_download_category, url: ->(category) { download_category_path(category) }
+= table.association :download_category, url: ->(category) { download_category_path(category) }
 = table.column :name, class: 'truncate-chars truncate-chars-30'
 = table.column(:published, class: 'table-data-centered') do |download|
   - download.published? ? '<span class="label label-success"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span></span>'.html_safe : '<span class="label label-danger"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></span>'.html_safe

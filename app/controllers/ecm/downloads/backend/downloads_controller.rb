@@ -12,12 +12,12 @@ class Ecm::Downloads::Backend::DownloadsController < Itsf::Backend::Resource::Ba
 
   def permitted_params
     params
-      .require(:ecm_downloads_download)
-      .permit(:ecm_downloads_download_category_id, :asset, :name, :description, :published)
+      .require(:download)
+      .permit(:download_category_id, :asset, :name, :description, :published)
   end
 
   def collection_scope
-    @q = collection_scope_with_search_scopes(resource_class.includes(:ecm_downloads_download_category)).ransack(params[:q])
+    @q = collection_scope_with_search_scopes(resource_class.includes(:download_category)).ransack(params[:q])
     @q.result(distinct: true)
   end
 
