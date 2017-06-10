@@ -8,5 +8,4 @@ en:
           table:
             download: 'Download'
   routes:
-    mount:
-      ecm_downloads_backend: '/backend/downloads'
+    ecm-downloads-backend-engine: 'downloads'

@@ -16,11 +16,6 @@ class Ecm::Downloads::Backend::DownloadsController < Itsf::Backend::Resource::Ba
       .permit(:download_category_id, :asset, :name, :description, :published)
   end
 
-  def collection_scope
-    @q = collection_scope_with_search_scopes(resource_class.includes(:download_category)).ransack(params[:q])
-    @q.result(distinct: true)
-  end
-
   def load_resource
     load_scope.friendly.find(params[:id])
   end
