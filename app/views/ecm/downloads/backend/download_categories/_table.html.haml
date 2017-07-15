@@ -1,6 +1,6 @@
-= table.column :locale
-= table.column :name, class: 'truncate-chars truncate-chars-30'
-= table.column :description, class: 'truncate-chars truncate-chars-30'
-= table.column :downloads_count
-= table.association :parent
+= table.column :locale, sortable: true
+= table.column :name, sortable: true, class: 'truncate-chars truncate-chars-30'
+= table.column :description, sortable: true, class: 'truncate-chars truncate-chars-30'
+= table.column :downloads_count, sortable: true
+= table.association :parent, sortable: true
 = table.timestamps

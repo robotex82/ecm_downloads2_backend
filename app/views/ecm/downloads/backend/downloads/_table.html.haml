@@ -1,9 +1,7 @@
-= table.association :download_category, url: ->(category) { download_category_path(category) }
-= table.column :name, class: 'truncate-chars truncate-chars-30'
-= table.column(:published, class: 'table-data-centered') do |download|
-  - download.published? ? '<span class="label label-success"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span></span>'.html_safe : '<span class="label label-danger"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></span>'.html_safe
-= table.column :asset_file_name, class: 'truncate-chars truncate-chars-30'
-= table.column(:asset_file_size) { |download| number_to_human_size(download.asset_file_size) }
-= table.column :asset_content_type
+= table.association :download_category, sortable: true, url: ->(category) { download_category_path(category) }
+= table.column :name, sortable: true, class: 'truncate-chars truncate-chars-30'
+= table.column(:asset_file_size, sortable: true) { |download| number_to_human_size(download.asset_file_size) }
+= table.column :asset_content_type, sortable: true
 = table.timestamps
 = table.column(:additional_actions, class: 'table-data-centered') { |download| link_to(t('.download'), download_download_path(download), class: 'btn btn-xs btn-primary') }
+= table.acts_as_published_actions
