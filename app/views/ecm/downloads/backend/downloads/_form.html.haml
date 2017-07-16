@@ -6,5 +6,5 @@
 
 .well
   = form.input :name
-  = form.input :description, input_html: { 'data-add-editor': true, 'data-editor-syntax': :textile }
+  = form.input :description, input_html: { 'data-add-editor': Itsf::Backend.features?(:'ace-rails-ap'), 'data-editor-syntax': :textile }
   = form.input :published, as: :boolean
