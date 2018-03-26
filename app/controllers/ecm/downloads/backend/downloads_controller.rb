@@ -1,4 +1,7 @@
 class Ecm::Downloads::Backend::DownloadsController < Itsf::Backend::Resource::BaseController
+  include ResourcesController::Sorting
+  include ResourcesController::FriendlyIdConcern
+
   def self.resource_class
     Ecm::Downloads::Download
   end
