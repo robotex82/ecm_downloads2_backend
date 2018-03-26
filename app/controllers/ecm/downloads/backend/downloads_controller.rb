@@ -10,7 +10,7 @@ module Ecm
         end
 
         def download
-          @download = Ecm::Downloads::Download.friendly.find(params[:id]).decorate
+          @download = load_resource_scope.find(params[:id]).decorate
           redirect_to @download.asset.expiring_url(100)
         end
 
@@ -20,10 +20,6 @@ module Ecm
           params
             .require(:download)
             .permit(:download_category_id, :asset, :name, :description, :published)
-        end
-
-        def load_resource
-          load_scope.friendly.find(params[:id])
         end
       end
     end

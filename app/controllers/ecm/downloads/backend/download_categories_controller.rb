@@ -16,10 +16,6 @@ module Ecm
             .require(:download_category)
             .permit(:name, :description, :locale)
         end
-
-        def load_resource
-          load_scope.friendly.find(params[:id])
-        end
       end
     end
   end
